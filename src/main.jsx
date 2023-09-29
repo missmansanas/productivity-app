@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import Pomodoro from './components/Pomodoro'
@@ -12,7 +12,7 @@ import TodoList from './components/TodoList'
 import ErrorPage from './components/ErrorPage.jsx';
 import AboutPage from './components/AboutPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
