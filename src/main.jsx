@@ -10,6 +10,7 @@ import {
 import Pomodoro from './components/Pomodoro'
 import TodoList from './components/TodoList'
 import ErrorPage from './components/ErrorPage.jsx';
+import AboutPage from './components/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "pomodoro",
         element: <Pomodoro/>,
+      },
+      {
+        path: "about",
+        element: <AboutPage/>,
       },
     ]
   },
