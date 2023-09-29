@@ -1,13 +1,29 @@
-import { useState } from 'react'
 import './App.css'
-import Pomodoro from './components/Pomodoro'
+import NavBar from './components/NavBar';
+import { Outlet } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Pomodoro/>
+      <NavBar/>
+      <div id="body" className='h-full box-border mx-auto w-96'>
+        <Outlet/>
+        <Toaster 
+          position='bottom-right'
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: 'transparent',
+              color: '#9CA8C8',
+              fontWeight: '200',
+              fontSize: '1.25rem',
+              margin: '0.5rem'
+            }
+          }}
+        />
+      </div>
     </>
   )
 }
