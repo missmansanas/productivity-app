@@ -1,8 +1,7 @@
 {
   "name": "pomodoro",
-  "private": true,
   "version": "0.0.0",
-  "homepage": "https://missmansanas.github.io/productivity-app",
+  "homepage": "http://missmansanas.github.io/productivity-app",
   "type": "module",
   "scripts": {
     "dev": "vite",
