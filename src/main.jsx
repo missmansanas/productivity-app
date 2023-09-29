@@ -4,15 +4,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Pomodoro from './components/Pomodoro'
 import TodoList from './components/TodoList'
 import ErrorPage from './components/ErrorPage.jsx';
-import AboutPage from './components/AboutPage';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -26,16 +25,23 @@ const router = createHashRouter([
         path: "pomodoro",
         element: <Pomodoro/>,
       },
-      {
-        path: "about",
-        element: <AboutPage/>,
-      },
     ]
   },
-]);
+],
+{
+  basename: "/productivity-app"
+});
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    {/* <BrowserRouter basename='/productivity-app'>
+      <Routes>
+        <Route path='/' element={<App/>}>
+          <Route path='/' index element={<TodoList/>} />
+          <Route path='/pomodoro' element={<Pomodoro/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter> */}
   </React.StrictMode>,
 )
