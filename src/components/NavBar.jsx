@@ -17,6 +17,12 @@ const NavBar = () => {
         >
         Pomodoro
         </NavLink>
+      <NavLink 
+        to="/about"
+        className={({isActive}) => isActive ? "active" : ""}
+        >
+        About
+      </NavLink>
     </div>
   )
 }

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <div id="body" className='h-full box-border mx-auto w-96'>
+      <div id="body" className='h-full box-border mx-auto'>
         <Outlet/>
         <Toaster 
           position='bottom-right'

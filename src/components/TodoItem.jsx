@@ -31,8 +31,8 @@ const TodoItem = ({item, toggleCompleted, deleteTodo, editTodo}) => {
   }
 
   return (
-    <li className='w-full flex flex-row justify-between items-center py-1 text-lg font-light transition-all duration-300'>
-      <div className='w-full flex flex-row items-center'>
+    <li className='w-full flex flex-row justify-between items-center px-2 py-4 text-lg font-light transition-all duration-300 border bg-white/20 shadow-sm hover:shadow-md rounded gap-3'>
+      {/* <div className='w-full flex flex-row items-center'> */}
         {completed ?
           <MdCheckBox 
             onClick={() => handleCompleted()}
@@ -53,7 +53,7 @@ const TodoItem = ({item, toggleCompleted, deleteTodo, editTodo}) => {
             onBlur={saveEdit}
             autoFocus
             className='
-              px-1 mx-3 w-full
+              px-1 w-full
               focus:outline focus:outline-1 focus:outline-sky-200 focus:bg-white focus:text-black
               transition-all duration-300
               '
@@ -62,16 +62,16 @@ const TodoItem = ({item, toggleCompleted, deleteTodo, editTodo}) => {
         ) : (
           <>
             <span
-              className={completed ? 'w-full px-1 mx-3 line-through text-black/20 cursor-text duration-300' : 'w-full px-1 mx-3 cursor-text duration-300'}
+              className={completed ? 'w-full px-1 line-through text-black/20 cursor-text duration-300' : 'w-full px-1 cursor-text duration-300'}
               onClick={() => handleEdit()}
             >
               {item.task}
             </span>
           </>
         )}
-      </div>
-        <AiOutlineDelete className='text-black/20 hover:text-black/70 duration-300 cursor-pointer' onClick={() => deleteTodo(id)}/>
+      {/* </div> */}
         <MdOutlineTimer className='text-black/20 hover:text-black/70 duration-300 cursor-pointer' onClick={focusOnTask} />
+        <AiOutlineDelete className='text-black/20 hover:text-black/70 duration-300 cursor-pointer' onClick={() => deleteTodo(id)}/>
     </li>
   )
 }

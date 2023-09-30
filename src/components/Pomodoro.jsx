@@ -133,7 +133,7 @@ const Pomodoro = () => {
   }, [timer]);
 
   return (
-    <div className='w-96 flex flex-col items-center h-full justify-center text-center'>
+    <div className='w-96 mx-auto flex flex-col items-center h-full justify-center text-center'>
       <input
         type='text'
         name='focus' 
